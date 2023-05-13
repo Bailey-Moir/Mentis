@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-I",
+                "${workspaceFolder}\\include",
+                "${workspaceFolder}\\src\\*.c",
+                "-o",
+                "${workspaceFolder}\\bin\\mentis"
+            ],
+            "group": "build",
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
