@@ -25,27 +25,9 @@ int main() {
     size_t num_tokens;
     token* tokens = generateTokens(fp, &num_tokens);
 
-    for (int i = 0; i < num_tokens; i++) {
-        enum Token type = tokens[i].type;
-
-        printf("\"%s\" is a %s at %d\n", tokens[i].content, 
-            type == 0 ?
-                "operator" :
-            type == 1 ?
-                "identifier" :
-            type == 2 ?
-                "constant" :
-            type == 3 ?
-                "keyword" :
-            type == 4 ?
-                "punctuation" :
-            type == 5 ?
-                "encapsulation" 
-            :   
-                "{ERROR: Invalid token type}",
-            tokens[i].pos
-        );
-    }
+    char map[6][14] = { "operator", "identifier", "constant", "keyword", "punctuation", "encapsulation" };
+    for (int i = 0; i < num_tokens; i++) 
+        printf("\"%s\" is a %s at %d\n", tokens[i].content, map[tokens[i].type], tokens[i].pos);
 
     return 0;
 }
