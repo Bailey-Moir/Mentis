@@ -199,7 +199,7 @@ token* generateTokens(FILE* fp, size_t* sizePointer) {
                 addTokenUnknown(buffer, fpos - buffer_len);
                 buffer[buffer_len++] = ch;
             }
-
+            
             // Save the punctuation token
             addToken(buffer + sizeof(char)*(buffer_len-1), fpos, isEncapsulation(ch) ? encapsulation : punctuation);
             buffer_len = 0;

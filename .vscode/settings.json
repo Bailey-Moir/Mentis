@@ -5,6 +5,7 @@
         "stdbool.h": "c",
         "math.h": "c",
         "string.h": "c",
-        "tokens.h": "c"
+        "tokens.h": "c",
+        "syntax.h": "c"
     }
 }
